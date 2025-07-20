@@ -1,0 +1,57 @@
+/* 🌱 Crop Recommendation UI */
+.crop-section {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #f5fff5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.crop-section h2 {
+  text-align: center;
+  color: #006600;
+  margin-bottom: 20px;
+}
+
+.crop-section label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #004d00;
+}
+
+.crop-section select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.crop-section button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crop-section button:hover {
+  background-color: #218838;
+}
+
+#crop-result {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
