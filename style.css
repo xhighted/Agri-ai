@@ -55,3 +55,24 @@
   color: #333;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  .crop-section {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .crop-section select,
+  .crop-section button {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .crop-section h2 {
+    font-size: 20px;
+  }
+
+  #crop-result {
+    font-size: 16px;
+  }
+}
