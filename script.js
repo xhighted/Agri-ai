@@ -26,3 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
     input.value = "";
   });
 });
+function recommendCrop() {
+  const region = document.getElementById("region").value;
+  const soil = document.getElementById("soil").value;
+  const resultDiv = document.getElementById("crop-result");
+
+  let recommendation = "No data available.";
+
+  if (region === "rift_valley" && soil === "black") {
+    recommendation = "🌽 Best Crop: Maize";
+  } else if (region === "central" && soil === "red") {
+    recommendation = "🥬 Best Crop: Cabbage";
+  } else if (region === "coast" && soil === "sandy") {
+    recommendation = "🥭 Best Crop: Mangoes";
+  } else if (region === "western" && soil === "clay") {
+    recommendation = "🍌 Best Crop: Bananas";
+  } else if (region === "eastern" && soil === "red") {
+    recommendation = "🌾 Best Crop: Sorghum";
+  }
+
+  resultDiv.textContent = recommendation;
+}
