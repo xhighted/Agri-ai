@@ -108,5 +108,34 @@
     <p>Loading latest agricultural news...</p>
   </div>
 </section>
-  </body>
+<script>
+  const apiKey = "da99fd34883fdf4ea6f642494fd1b9eb";
+  const newsContainer = document.getElementById("news-feed");
+
+  async function fetchNews() {
+    try {
+      const response = await fetch(`https://gnews.io/api/v4/search?q=agriculture&lang=en&max=5&apikey=${apiKey}`);
+      const data = await response.json();
+
+      if (data.articles && data.articles.length > 0) {
+        newsContainer.innerHTML = "";
+        data.articles.forEach(article => {
+          const articleEl = document.createElement("div");
+          articleEl.classList.add("news-article");
+          articleEl.innerHTML = `
+            <h4><a href="${article.url}" target="_blank">${article.title}</a></h4>
+            <p>${article.description || "No description available."}</p>
+          `;
+          newsContainer.appendChild(articleEl);
+        });
+      } else {
+        newsContainer.innerHTML = "<p>No news articles found.</p>";
+      }
+    } catch (error) {
+      newsContainer.innerHTML = "<p>Failed to load news. Please try again later.</p>";
+    }
+  }
+
+  fetchNews();
+</script>  </body>
 </html>
