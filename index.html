@@ -72,5 +72,31 @@
   </form>
 </section> 
 <script src="script.js"></script> 
-</body>
+<section id="crop-recommendation" style="margin-top: 60px; padding: 20px;">
+  <h2 style="text-align: center;">🌾 Crop Recommendations</h2>
+
+  <div style="display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto;">
+    <label for="region">Select Your Region:</label>
+    <select id="region">
+      <option value="rift_valley">Rift Valley</option>
+      <option value="central">Central</option>
+      <option value="coast">Coast</option>
+      <option value="western">Western</option>
+      <option value="eastern">Eastern</option>
+    </select>
+
+    <label for="soil">Select Soil Type:</label>
+    <select id="soil">
+      <option value="black">Black Soil</option>
+      <option value="red">Red Soil</option>
+      <option value="sandy">Sandy Soil</option>
+      <option value="clay">Clay Soil</option>
+    </select>
+
+    <button onclick="recommendCrop()" style="background-color: green; color: white; padding: 10px; border: none; border-radius: 5px;">Get Recommendations</button>
+
+    <div id="crop-result" style="margin-top: 20px; font-weight: bold;"></div>
+  </div>
+</section>
+  </body>
 </html>
